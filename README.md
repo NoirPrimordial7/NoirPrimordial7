@@ -1,76 +1,94 @@
-<p align="center">
-  <img src="assets/hero/noir-cover.jpg" width="1200" alt="NOIR — Aditya Gholap. Software, cloud and web. Curiosity, compiled. Hand-inked N7 emblem in a burgundy, blue and ochre paper collage.">
-</p>
-
-**Aditya Gholap / NoirPrimordial7** — software developer, cloud-computing student, and a curious mind with a taste for expressive design.<br>
-B.Tech CSE · MIT School of Computing, MIT-ADT University · Pune, India
-
-I build cloud-connected applications and explore how code can make sense of the world—from local services and market data to wildlife recognition.
-
-[The projects ↓](#the-projects) &nbsp; / &nbsp; [The toolbox ↓](#the-toolbox) &nbsp; / &nbsp; [Say hello ↗](#say-hello)
-
-<p>
 <picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/graphics/noir-loop-still.png">
-  <img src="assets/graphics/noir-loop.gif" width="1200" alt="The Noir loop: build, break, learn, repeat.">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/hero/illustrated-still.png">
+  <img src="assets/hero/illustrated-loop.gif" width="1200" alt="Aditya Gholap / NOIR — the original ink-and-paper collage, with subtle motion around the N7 emblem. Software, cloud and web.">
 </picture>
-</p>
 
-<a id="the-projects"></a>
+**Aditya Gholap / NoirPrimordial7**<br>
+Software · Cloud · Creative Technology<br>
+B.Tech CSE — Cloud Computing · MIT-ADT University · Pune, India
 
-## Four projects. Four different worlds.
+I build systems that turn ideas into working products.
 
-<a href="https://github.com/NoirPrimordial7/nearnest"><img src="assets/projects/nearnest-plate.svg" width="1200" alt="01 — MediFind / NearNest Platform. Custom neighborhood-and-location logo."></a>
-
-**[MediFind / NearNest Platform ↗](https://github.com/NoirPrimordial7/nearnest)**<br>
-A local store and service platform with sign-in flows, store registration, and separate public and admin experiences.<br>
-<sub>REACT · VITE · FIREBASE AUTH · FIRESTORE</sub>
-
-<a href="https://github.com/NoirPrimordial7/AI-Powered-Market-Navigator"><img src="assets/projects/market-plate.svg" width="1200" alt="02 — AI-Powered Market Navigator. Custom compass-and-trend logo."></a>
-
-**[AI-Powered Market Navigator ↗](https://github.com/NoirPrimordial7/AI-Powered-Market-Navigator)**<br>
-Stock-trend forecasting and sentiment analysis, brought together in an interactive data-visualization workflow.<br>
-<sub>PYTHON · TENSORFLOW / KERAS · STREAMLIT · PANDAS · NUMPY</sub>
-
-<a href="https://github.com/NoirPrimordial7/Wild-Life-Recognition-System-"><img src="assets/projects/wildlife-plate.svg" width="1200" alt="03 — AI-Based Wildlife Recognition System. Custom paw-and-observation logo."></a>
-
-**[AI-Based Wildlife Recognition System ↗](https://github.com/NoirPrimordial7/Wild-Life-Recognition-System-)**<br>
-Classifies wildlife in images, video frames, and webcam input, with prediction confidence, animal information, and exportable history.<br>
-<sub>PYTHON · TENSORFLOW · OPENCV · IMAGE CLASSIFICATION</sub>
-
-<a href="https://github.com/NoirPrimordial7/Wild-life-detection-system"><img src="assets/projects/eco-watch-plate.svg" width="1200" alt="04 — Eco Watch. Custom leaf-and-clock logo."></a>
-
-**[Eco Watch — Wildlife Classification ↗](https://github.com/NoirPrimordial7/Wild-life-detection-system)**<br>
-A wildlife-classification project centered on environmental awareness. The public repository currently contains species labels and animal reference data.<br>
-<sub>WILDLIFE · SPECIES DATA · ENVIRONMENTAL AWARENESS</sub>
+[Selected work ↓](#selected-work) · [System ↓](#system) · [Résumé ↗](docs/resume.md) · [Contact ↓](#connect)
 
 <br>
 
-<a id="the-toolbox"></a>
+<a id="selected-work"></a>
+<h2><img src="assets/graphics/illustrated-work.svg" width="1000" alt="01 / Selected work"></h2>
 
-<p><img src="assets/graphics/noir-toolbox.svg" width="1200" alt="The toolbox — a little logic, a lot of curiosity."></p>
+<a href="https://github.com/NoirPrimordial7/TenderMate-AI"><picture><source media="(max-width: 600px)" srcset="assets/projects/tendermate-illustrated-mobile.svg"><img src="assets/projects/tendermate-illustrated.svg" width="1000" alt="TenderMate AI — Next.js / FastAPI / Supabase / Gemini"></picture></a>
 
-| What I'm working with | Tools & technologies |
-| :--- | :--- |
-| **Programming** | Python · Java · JavaScript · TypeScript · C / C++ · Dart |
-| **Web & apps** | React · Next.js · Vite · Flutter · HTML / CSS |
-| **Cloud & backend** | AWS fundamentals · Firebase · FastAPI · PostgreSQL · Supabase · Docker |
-| **Data & vision** | TensorFlow / Keras · OpenCV · YOLOv8 · Pandas · NumPy |
-| **Everyday tools** | Git · GitHub · VS Code |
+Turns tender PDFs into structured analysis, with authenticated workspaces, private storage, quotas and audit logging.<br>
+[Source ↗](https://github.com/NoirPrimordial7/TenderMate-AI) · [Case notes ↗](docs/cases/tendermate.md) · [Live app ↗](https://tender-mate-ai.vercel.app)
 
-**Currently sharpening:** DSA, Java, Python, and AWS. **Exploring next:** Kubernetes.<br>
-[My LeetCode learning journal ↗](https://github.com/NoirPrimordial7/-leetcode-learning-journal) — solutions, explanations, and the mistakes that taught me something.
+<br>
 
-### A little real-world grounding.
+<a href="https://github.com/NoirPrimordial7/ResolveX"><picture><source media="(max-width: 600px)" srcset="assets/projects/resolvex-illustrated-mobile.svg"><img src="assets/projects/resolvex-illustrated.svg" width="1000" alt="ResolveX — React / FastAPI / PostgreSQL / Docker"></picture></a>
 
-**Cloud Computing Intern · PlaceMantra Private Ltd**<br>
-June–August 2025 · Pune<br>
-Practical exposure to AWS fundamentals, networking, virtual machines, storage, cloud security, and deployment practices.
+Connects students, faculty and placement administrators through role-based ticket assignment, conversations and resolution workflows.<br>
+[Source ↗](https://github.com/NoirPrimordial7/ResolveX) · [Case notes ↗](docs/cases/resolvex.md)
 
-<a id="say-hello"></a>
+<br>
 
-### Good things start with a conversation.
+<a href="https://github.com/NoirPrimordial7/kumbh-kavach-family-safety"><picture><source media="(max-width: 600px)" srcset="assets/projects/kumbh-illustrated-mobile.svg"><img src="assets/projects/kumbh-illustrated.svg" width="1000" alt="Kumbh Kavach — React / TypeScript / MapLibre / Zustand"></picture></a>
 
-[GitHub ↗](https://github.com/NoirPrimordial7) &nbsp; / &nbsp; [LinkedIn ↗](https://www.linkedin.com/in/aditya-gholap-574641374) &nbsp; / &nbsp; [Email ↗](mailto:adityagholap19.06@gmail.com)
+Explores family safety in crowded places through a working PWA with a regional map, reunion flow and simulated separation/SOS scenarios.<br>
+[Source ↗](https://github.com/NoirPrimordial7/kumbh-kavach-family-safety) · [Case notes ↗](docs/cases/kumbh.md)
 
-<p><img src="assets/graphics/noir-signature.svg" width="1200" alt="NoirPrimordial7 — made of questions, built with code."></p>
+<br>
+
+<a href="https://github.com/NoirPrimordial7/nearnest"><picture><source media="(max-width: 600px)" srcset="assets/projects/nearnest-illustrated-mobile.svg"><img src="assets/projects/nearnest-illustrated.svg" width="1000" alt="NearNest — React / Vite / Firebase / Firestore"></picture></a>
+
+Connects medicine discovery with pharmacy onboarding, document verification, inventory and separate customer, store and administrator flows.<br>
+[Source ↗](https://github.com/NoirPrimordial7/nearnest) · [Case notes ↗](docs/cases/nearnest.md)
+
+<br>
+
+---
+
+<a id="system"></a>
+<h2><img src="assets/graphics/illustrated-system.svg" width="1000" alt="02 / What I build with"></h2>
+
+<picture><source media="(max-width: 600px)" srcset="assets/graphics/system-mobile.svg"><img src="assets/graphics/system.svg" width="1000" alt="Code: Python, Java, JavaScript, TypeScript, C++. Build: React, Next.js, Flutter. Backend: FastAPI, Firebase, PostgreSQL, Supabase. Cloud: AWS fundamentals, Docker. Intelligence: TensorFlow, OpenCV, Pandas, NumPy."></picture>
+
+<details><summary>Read the stack as text</summary>
+
+**Code** — Python · Java · JavaScript · TypeScript · C++<br>
+**Build** — React · Next.js · Flutter<br>
+**Backend & data** — FastAPI · Firebase · PostgreSQL · Supabase<br>
+**Cloud** — AWS fundamentals · Docker<br>
+**Intelligence** — TensorFlow · OpenCV · Pandas · NumPy
+
+</details>
+
+<br>
+
+---
+
+<h2><img src="assets/graphics/illustrated-experience.svg" width="1000" alt="03 / Experience — out in the field"></h2>
+
+**PlaceMantra Private Ltd · Cloud Computing Intern**<br>
+June–August 2025
+
+Practical experience with AWS fundamentals, networking and deployment.
+
+<br>
+
+---
+
+<h2><img src="assets/graphics/illustrated-focus.svg" width="1000" alt="04 / Current focus — still figuring things out"></h2>
+
+**DSA** → [My learning journal ↗](https://github.com/NoirPrimordial7/-leetcode-learning-journal)<br>
+**AWS** → Cloud fundamentals<br>
+**Kubernetes** → Exploring
+
+<br>
+
+---
+
+<a id="connect"></a>
+<h2><img src="assets/graphics/illustrated-connect.svg" width="1000" alt="05 / Connect — say hello"></h2>
+
+[GitHub ↗](https://github.com/NoirPrimordial7) · [LinkedIn ↗](https://www.linkedin.com/in/aditya-gholap-574641374) · [Email ↗](mailto:adityagholap19.06@gmail.com)
+
+<img src="assets/graphics/noir-signature.svg" width="1000" alt="Made of questions. Built with code.">
