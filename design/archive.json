@@ -1,0 +1,69 @@
+{
+  "projects": [
+    {
+      "id": "tendermate",
+      "name": "TenderMate AI",
+      "verb": "ANALYZE",
+      "category": "AI DOCUMENT WORKSPACE",
+      "color": "#722F48",
+      "repo": "TenderMate-AI",
+      "stack": [
+        "Next.js",
+        "FastAPI",
+        "Supabase",
+        "Gemini"
+      ],
+      "description": "Turns tender PDFs into structured analysis, with authenticated workspaces, private storage, quotas and audit logging.",
+      "detail": "The browser talks to a FastAPI service for PDF extraction and Gemini analysis. Supabase provides PostgreSQL and private document storage; authorization, account limits and audit events stay on the server.",
+      "live": "https://tender-mate-ai.vercel.app"
+    },
+    {
+      "id": "resolvex",
+      "name": "ResolveX",
+      "verb": "RESOLVE",
+      "category": "PLACEMENT SUPPORT / ROLE-BASED WORKFLOWS",
+      "color": "#7185B8",
+      "repo": "ResolveX",
+      "stack": [
+        "React",
+        "FastAPI",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "description": "Connects students, faculty and placement administrators through role-based ticket assignment, conversations and resolution workflows.",
+      "detail": "A React interface sits above FastAPI, SQLAlchemy and PostgreSQL. JWT authentication and role checks separate customer, agent and administrator workflows. Alembic manages schema changes; Docker Compose packages the services."
+    },
+    {
+      "id": "kumbh",
+      "name": "Kumbh Kavach",
+      "verb": "PROTECT",
+      "category": "FAMILY SAFETY · DEMO PWA",
+      "color": "#D5A450",
+      "repo": "kumbh-kavach-family-safety",
+      "stack": [
+        "React",
+        "TypeScript",
+        "MapLibre",
+        "Zustand"
+      ],
+      "description": "Explores family safety in crowded places through a working PWA with a regional map, reunion flow and simulated separation/SOS scenarios.",
+      "detail": "The jury demo works without accounts or hardware. Family movement, bands and SOS scenarios are simulated; browser geolocation is optional. This is a demonstrator, not a deployed emergency service or an offline mesh network."
+    },
+    {
+      "id": "nearnest",
+      "name": "NearNest",
+      "verb": "DISCOVER",
+      "category": "PHARMACY DISCOVERY & STORE OPERATIONS",
+      "color": "#C4523E",
+      "repo": "nearnest",
+      "stack": [
+        "React",
+        "Vite",
+        "Firebase",
+        "Firestore"
+      ],
+      "description": "Connects medicine discovery with pharmacy onboarding, document verification, inventory and separate customer, store and administrator flows.",
+      "detail": "React routes cover discovery, account setup, store registration and operations. Firebase Authentication and Firestore support identity and application data. Store verification and administration are explicit parts of the product, rather than a single landing page."
+    }
+  ]
+}

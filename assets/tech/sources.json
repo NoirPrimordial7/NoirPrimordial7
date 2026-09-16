@@ -1,0 +1,97 @@
+[
+  {
+    "name": "python",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-plain.svg",
+    "ok": true
+  },
+  {
+    "name": "java",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-plain.svg",
+    "ok": true
+  },
+  {
+    "name": "javascript",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg",
+    "ok": true
+  },
+  {
+    "name": "typescript",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg",
+    "ok": true
+  },
+  {
+    "name": "cplusplus",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-plain.svg",
+    "ok": true
+  },
+  {
+    "name": "react",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+    "ok": true
+  },
+  {
+    "name": "nextjs",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg",
+    "ok": true
+  },
+  {
+    "name": "flutter",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg",
+    "ok": true
+  },
+  {
+    "name": "amazonwebservices",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
+    "ok": true
+  },
+  {
+    "name": "firebase",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg",
+    "ok": true
+  },
+  {
+    "name": "docker",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-plain.svg",
+    "ok": true
+  },
+  {
+    "name": "postgresql",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-plain.svg",
+    "ok": true
+  },
+  {
+    "name": "supabase",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg",
+    "ok": true
+  },
+  {
+    "name": "tensorflow",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg",
+    "ok": true
+  },
+  {
+    "name": "opencv",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/opencv/opencv-plain.svg",
+    "ok": true
+  },
+  {
+    "name": "pandas",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg",
+    "ok": true
+  },
+  {
+    "name": "numpy",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg",
+    "ok": true
+  },
+  {
+    "name": "fastapi",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg",
+    "ok": true
+  },
+  {
+    "name": "kubernetes",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg",
+    "ok": true
+  }
+]
