@@ -1,0 +1,23 @@
+{
+  "name": "NOIR \u2014 Ink & Curiosity",
+  "colors": {
+    "paper": "#F1E5D0",
+    "ink": "#20191D",
+    "wine": "#722F48",
+    "blue": "#7185B8",
+    "red": "#C4523E",
+    "gold": "#D5A450",
+    "rose": "#D8AAA7"
+  },
+  "typography": {
+    "display": "Expressive editorial serif / Georgia",
+    "labels": "Consolas / monospace",
+    "body": "GitHub native UI font"
+  },
+  "principles": [
+    "No faces or portraits",
+    "No neon green",
+    "Black ink, torn paper, comic halftone",
+    "Legible names and selectable project copy"
+  ]
+}

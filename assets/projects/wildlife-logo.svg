@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" role="img"><title>Wildlife Recognition — custom project mark</title><g stroke="#20191D" stroke-width="4" fill="none" stroke-linecap="round">
+        <path d="M7 31V8H30M70 8H93V31M93 69V92H70M30 92H7V69"/>
+        <path d="M16 50Q49 12 84 50Q51 89 16 50Z"/>
+        </g><path d="M35 62C28 51 38 46 42 43C45 37 54 37 58 43C62 47 71 52 65 62C62 68 55 65 50 65C44 65 39 70 35 62Z" fill="#20191D"/>
+        <ellipse cx="32" cy="40" rx="5" ry="7" fill="#722F48" transform="rotate(-25 32 40)"/>
+        <ellipse cx="46" cy="31" rx="5" ry="7" fill="#722F48"/>
+        <ellipse cx="60" cy="34" rx="5" ry="7" fill="#722F48" transform="rotate(20 60 34)"/>
+        <ellipse cx="70" cy="45" rx="4" ry="6" fill="#722F48" transform="rotate(30 70 45)"/></svg>
