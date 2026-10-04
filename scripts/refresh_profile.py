@@ -120,7 +120,7 @@ B.Tech CSE · MIT-ADT University · Pune, India · Class of 2027</p>
 <p>I turn data into predictions, images into signals, and ideas into software.<br>
 My work spans machine learning, computer vision, and full-stack applications backed by cloud services.</p>
 
-<p><a href="#selected-work">Selected work ↓</a> · <a href="#system">Toolkit ↓</a> · <a href="docs/resume.md">Résumé ↗</a> · <a href="#connect">Connect ↓</a></p>
+<p><a href="#user-content-selected-work">Selected work ↓</a> · <a href="#user-content-system">Toolkit ↓</a> · <a href="docs/resume.md">Résumé ↗</a> · <a href="#user-content-connect">Connect ↓</a></p>
 
 '''
     content += section('selected-work', 'work', '01 / Selected work')
@@ -169,6 +169,7 @@ June–August 2025 · Pune</p>
     content += '<p>Let’s talk about machine learning, software, or an idea worth building.</p>\n'
     content += '<p>' + ' · '.join([link(GITHUB.rstrip('/'), 'GitHub ↗'), link('https://www.linkedin.com/in/aditya-gholap-574641374', 'LinkedIn ↗'), link('mailto:adityagholap19.06@gmail.com', 'Email ↗')]) + '</p>\n\n'
     content += '<img src="assets/graphics/noir-signature.svg" width="1000" alt="Made of questions. Built with code.">\n'
+    # GitHub prefixes custom anchor IDs with user-content- during sanitization.
     write('README.md', content)
     return content
 
@@ -219,7 +220,7 @@ Adapted from the supplied résumé, with project scope clarified against the lin
 
 def preview(content):
     # A base URL resolves asset paths; fragment links must retain the preview page.
-    content = content.replace('href="#', 'href="preview/index.html#')
+    content = content.replace('href="#user-content-', 'href="preview/index.html#')
     css = '''*{box-sizing:border-box}body{margin:0;background:#0d1117;color:#f0f6fc;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body.light{background:#fff;color:#1f2328}nav{max-width:1012px;margin:24px auto 16px;display:flex;gap:16px;align-items:center;padding:0 20px;font-size:13px}button{border:1px solid #9198a1;background:transparent;color:inherit;border-radius:6px;padding:6px 12px;cursor:pointer}article{max-width:1012px;margin:0 auto 40px;border:1px solid #3d444d;border-radius:6px;padding:32px}a{color:#4493f8;text-decoration:none}a:hover{text-decoration:underline}img{max-width:100%;height:auto;vertical-align:middle}h1{font-size:32px;line-height:1.3;border-bottom:1px solid #3d444d;padding-bottom:10px}h1 sub{font-size:16px;vertical-align:baseline;font-weight:400}h2{margin:28px 0 16px}p{margin:16px 0}hr{border:0;height:1px;background:#3d444d;margin:28px 0}summary{cursor:pointer}details p{margin-left:16px}@media(max-width:600px){article{padding:16px;border:0;border-radius:0}nav{margin:10px auto;flex-wrap:wrap;font-size:11px}h1{font-size:28px}}'''
     controls = '<nav><span>NOIR · Profile preview</span><button id="theme">Light / dark</button><button id="motion" aria-pressed="false">Still artwork</button></nav>'
     js = '''document.querySelector('#theme').onclick=()=>document.body.classList.toggle('light');document.querySelector('#motion').onclick=function(){const hero=document.querySelector('article>picture');hero.querySelector('source')?.remove();const still=this.getAttribute('aria-pressed')!=='true';hero.querySelector('img').src=still?'assets/hero/illustrated-still.png':'assets/hero/illustrated-loop.gif';this.setAttribute('aria-pressed',String(still));this.textContent=still?'Animated artwork':'Still artwork';};'''

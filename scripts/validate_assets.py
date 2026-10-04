@@ -48,11 +48,11 @@ refs = References()
 refs.feed(readme)
 for ref in refs.links:
     if ref.startswith('#'):
-        assert ref[1:] in refs.ids, ref
+        assert ref[1:].removeprefix('user-content-') in refs.ids, ref
     elif not ref.startswith(('https://', 'mailto:')):
         assert (root / ref.split('#')[0]).is_file(), ref
 preview = (root / 'preview/index.html').read_text(encoding='utf-8')
-assert '<article>' + readme.replace('href="#', 'href="preview/index.html#') + '</article>' in preview, 'Preview differs from README'
+assert '<article>' + readme.replace('href="#user-content-', 'href="preview/index.html#') + '</article>' in preview, 'Preview differs from README'
 for document in [root / 'docs/resume.md', *(root / f'docs/cases/{p["id"]}.md' for p in projects)]:
     for ref in re.findall(r'\]\(([^)]+)\)', document.read_text(encoding='utf-8')):
         if not ref.startswith(('https://', 'mailto:', '#')):
@@ -80,4 +80,3 @@ assert max(diffs) > 0, 'Animation is static'
 assert diffs[-1] < max(diffs[:-1])*1.5, 'Loop seam is unusually large'
 print(f'PASS: assets, local links, SVG safety, 96 moving frames, {duration} ms, infinite loop, size budget.')
 print(f'Frame change: mean={sum(diffs)/96:.3f}; seam={diffs[-1]:.3f}; maximum={max(diffs):.3f}')
-

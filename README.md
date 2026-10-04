@@ -10,7 +10,7 @@ B.Tech CSE · MIT-ADT University · Pune, India · Class of 2027</p>
 <p>I turn data into predictions, images into signals, and ideas into software.<br>
 My work spans machine learning, computer vision, and full-stack applications backed by cloud services.</p>
 
-<p><a href="#selected-work">Selected work ↓</a> · <a href="#system">Toolkit ↓</a> · <a href="docs/resume.md">Résumé ↗</a> · <a href="#connect">Connect ↓</a></p>
+<p><a href="#user-content-selected-work">Selected work ↓</a> · <a href="#user-content-system">Toolkit ↓</a> · <a href="docs/resume.md">Résumé ↗</a> · <a href="#user-content-connect">Connect ↓</a></p>
 
 <a id="selected-work"></a>
 <h2><img src="assets/graphics/illustrated-work.svg" width="1000" alt="01 / Selected work"></h2>
