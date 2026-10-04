@@ -2,6 +2,8 @@
 from pathlib import Path
 from html import escape
 import json
+import re
+import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 PAPER, INK, WINE, BLUE, GOLD = '#F1E5D0', '#20191D', '#722F48', '#7185B8', '#D5A450'
@@ -60,6 +62,74 @@ def icon(slug):
     return f'<path d="{paths[slug]}" fill="none" stroke="{INK}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>'
 
 
+def technology_logo(name, x, y, size):
+    """Embed the licensed vector mark, isolating its gradients and CSS classes."""
+    source = (ROOT / f'assets/tech/{name}.svg').read_text(encoding='utf-8')
+    original = ET.fromstring(source)
+    for node in original.iter():
+        identifier = node.get('id')
+        if identifier:
+            source = source.replace(f'"{identifier}"', f'"tech-{name}-{identifier}"')
+            source = source.replace(f'url(#{identifier})', f'url(#tech-{name}-{identifier})')
+            source = source.replace(f'href="#{identifier}"', f'href="#tech-{name}-{identifier}"')
+    classes = set(re.findall(r'class="([^"]+)"', source))
+    for group in classes:
+        for classname in group.split():
+            source = re.sub(r'(?<=\.)' + re.escape(classname) + r'(?=[\s,{.:])', f'tech-{name}-{classname}', source)
+        source = source.replace(f'class="{group}"', 'class="' + ' '.join(f'tech-{name}-{c}' for c in group.split()) + '"')
+    body = re.sub(r'^.*?<svg[^>]*>|</svg>\s*$', '', source, flags=re.S)
+    return f'<svg data-tech="{name}" x="{x}" y="{y}" width="{size}" height="{size}" viewBox="{original.get("viewBox", "0 0 128 128")}">{body}</svg>'
+
+
+def toolkit():
+    groups = [
+        ('AI & VISION', 'Models, perception & analysis', WINE, 3,
+         [('tensorflow', 'TensorFlow'), ('keras', 'Keras'), ('opencv', 'OpenCV'),
+          ('scikitlearn', 'Scikit-learn'), ('pandas', 'Pandas'), ('numpy', 'NumPy')],
+         'LSTM / CNN / YOLOv8'),
+        ('CODE & VERSION CONTROL', 'The languages behind the work', BLUE, 4,
+         [('python', 'Python'), ('java', 'Java'), ('javascript', 'JavaScript'), ('typescript', 'TypeScript'),
+          ('c', 'C'), ('cplusplus', 'C++'), ('dart', 'Dart'), ('git', 'Git')],
+         'Problem-solving / GitHub'),
+        ('WEB & APIs', 'Interfaces meet application logic', '#C4523E', 3,
+         [('react', 'React'), ('nextjs', 'Next.js'), ('vitejs', 'Vite'),
+          ('streamlit', 'Streamlit'), ('fastapi', 'FastAPI')],
+         'REST APIs / JWT / RBAC'),
+        ('DATA & CLOUD', 'Persistence, services & deployment', '#967028', 3,
+         [('firebase', 'Firebase'), ('postgresql', 'PostgreSQL'), ('supabase', 'Supabase'),
+          ('amazonwebservices', 'AWS'), ('docker', 'Docker')],
+         'Firestore / AWS fundamentals'),
+    ]
+    for mobile in (False, True):
+        width = 600 if mobile else 1000
+        panel_width = 552 if mobile else 466
+        panel_height, gap, margin = 374, 20, 24
+        height = 4 * panel_height + 3 * gap + 2 * margin if mobile else 2 * panel_height + gap + 2 * margin
+        body = f'<rect width="{width}" height="{height}" fill="{PAPER}"/>'
+        for index, (name, subtitle, accent, columns, items, footer) in enumerate(groups):
+            ink_accent = '#435781' if accent == BLUE else accent
+            x = margin if mobile else margin + (index % 2) * (panel_width + gap)
+            y = margin + (index if mobile else index // 2) * (panel_height + gap)
+            body += f'<rect x="{x}" y="{y}" width="{panel_width}" height="{panel_height}" rx="8" fill="#FAF5EB" stroke="#D7C7B0"/>'
+            body += f'<path d="M{x+18} {y+1}H{x+panel_width-18}" stroke="{accent}" stroke-width="3"/>'
+            body += text(x+20, y+35, f'{index+1:02} / {name}', 21 if mobile else 18, ink_accent, 'monospace')
+            body += text(x+20, y+65, subtitle, 23 if mobile else 21)
+            cell_width = (panel_width - 32) / columns
+            for item_index, (slug, label) in enumerate(items):
+                tx = x + 16 + (item_index % columns) * cell_width
+                ty = y + 89 + (item_index // columns) * 113
+                cx = tx + cell_width / 2
+                body += f'<rect x="{tx+4:g}" y="{ty}" width="{cell_width-8:g}" height="102" rx="7" fill="#FFFDF8" stroke="#E6DCCD"/>'
+                size = 55 if mobile else 49
+                body += technology_logo(slug, cx-size/2, ty+10, size)
+                label_size = (20 if mobile else 17) if columns == 4 else (23 if mobile else 20)
+                body += f'<text x="{cx:g}" y="{ty+88}" text-anchor="middle" font-family="Arial" font-size="{label_size}" fill="{INK}">{escape(label)}</text>'
+            body += f'<path d="M{x+20} {y+328}H{x+panel_width-20}" stroke="#D7C7B0"/>'
+            body += text(x+20, y+355, footer, 21 if mobile else 19, ink_accent, 'monospace')
+        title = 'Technology toolkit: ' + '; '.join(name + ': ' + ', '.join(label for _, label in items) + '. ' + footer for name, _, _, _, items, footer in groups)
+        svg(f'assets/graphics/system{"-mobile" if mobile else ""}.svg', width, height, body, title)
+
+
 def artwork():
     for index, project in enumerate(PROJECTS, 1):
         fg = INK if project['color'] in (BLUE, GOLD) else PAPER
@@ -78,21 +148,7 @@ def artwork():
                 body += f'<path d="M910 65H958M944 51L958 65L944 79" fill="none" stroke="{fg}" stroke-width="2"/>'
             svg(f'assets/projects/{project["id"]}-illustrated{"-mobile" if mobile else ""}.svg', width, height, body, project['name'] + ' | ' + ' / '.join(project['stack']))
 
-    rows = [
-        ('AI / ML', ['TensorFlow / Keras / LSTM / CNN / YOLOv8', 'OpenCV / Scikit-learn / Pandas / NumPy']),
-        ('SOFTWARE', ['Python / Java / JavaScript / TypeScript / C / C++ / Dart', 'React / Vite / Next.js / Streamlit / FastAPI']),
-        ('DATA / CLOUD', ['Firebase / Firestore / PostgreSQL / Supabase', 'REST APIs / JWT / RBAC / Docker / AWS fundamentals']),
-    ]
-    for mobile in (False, True):
-        width, height = (600, 420) if mobile else (1000, 345)
-        body = f'<rect width="{width}" height="{height}" fill="{PAPER}"/>'
-        for index, (label, lines) in enumerate(rows):
-            y = 22 + index * (136 if mobile else 107)
-            body += f'<path d="M25 {y}H{width-25}" stroke="{INK}" opacity=".25"/>'
-            body += text(26, y + 29, f'0{index+1} / {label}', 19, WINE, 'monospace')
-            for j, line in enumerate(lines):
-                body += text(26, y + 63 + j * 28, line, 17 if mobile else 23)
-        svg(f'assets/graphics/system{"-mobile" if mobile else ""}.svg', width, height, body, 'AI/ML, software, data and cloud skills from Aditya Gholap’s resume')
+    toolkit()
     body = f'<rect width="1000" height="122" fill="{PAPER}"/>'
     body += text(26, 77, '04', 48, WINE, 'monospace') + text(130, 80, 'Always learning.', 47, WINE, 'Georgia')
     body += f'<path d="M102 21V102M21 112Q340 119 650 111T980 114" fill="none" stroke="{WINE}" stroke-width="2" opacity=".55"/>'

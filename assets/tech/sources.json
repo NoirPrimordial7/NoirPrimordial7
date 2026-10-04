@@ -93,5 +93,40 @@
     "name": "kubernetes",
     "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg",
     "ok": true
+  },
+  {
+    "name": "keras",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/keras/keras-original.svg",
+    "ok": true
+  },
+  {
+    "name": "scikitlearn",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/scikitlearn/scikitlearn-original.svg",
+    "ok": true
+  },
+  {
+    "name": "vitejs",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/vitejs/vitejs-original.svg",
+    "ok": true
+  },
+  {
+    "name": "streamlit",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/streamlit/streamlit-original.svg",
+    "ok": true
+  },
+  {
+    "name": "dart",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/dart/dart-original.svg",
+    "ok": true
+  },
+  {
+    "name": "c",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg",
+    "ok": true
+  },
+  {
+    "name": "git",
+    "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
+    "ok": true
   }
 ]
