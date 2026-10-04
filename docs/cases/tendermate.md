@@ -1,11 +1,17 @@
-# CASE / 01 — TenderMate AI
+# TenderMate AI
 
-Turns tender PDFs into structured analysis, with authenticated workspaces, private storage, quotas and audit logging.
+**05 / Tender-readiness MVP**
+
+Turns tender PDFs into AI-assisted analysis with private storage, user-scoped history, text extraction, and Gemini OCR fallback for scanned documents.
 
 ## Inside the system
 
-The browser talks to a FastAPI service for PDF extraction and Gemini analysis. Supabase provides PostgreSQL and private document storage; authorization, account limits and audit events stay on the server.
+A Next.js frontend connects to FastAPI, Supabase PostgreSQL, private Supabase Storage, and Gemini. JWT authentication, rate limits, daily upload quotas, account lockout, audit logs, and trial-credit tracking support the workflow.
 
-**Components:** Next.js · FastAPI · Supabase · Gemini
+**Built with:** Next.js · FastAPI · Supabase · Gemini
 
-[Source repository ↗](https://github.com/NoirPrimordial7/TenderMate-AI)
+## Current scope
+
+An MVP with separate Vercel and Render deployment flows. OCR and AI analysis depend on backend provider configuration.
+
+[Source repository ↗](https://github.com/NoirPrimordial7/TenderMate-AI) · [Back to profile](../../README.md#selected-work)

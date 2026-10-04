@@ -1,11 +1,17 @@
-# CASE / 02 — ResolveX
+# ResolveX
 
-Connects students, faculty and placement administrators through role-based ticket assignment, conversations and resolution workflows.
+**04 / Full-stack helpdesk**
+
+A customer-support ticketing system with customer, support-agent, and admin roles, JWT/RBAC, assignment, comments, filters, and reassignment workflows.
 
 ## Inside the system
 
-A React interface sits above FastAPI, SQLAlchemy and PostgreSQL. JWT authentication and role checks separate customer, agent and administrator workflows. Alembic manages schema changes; Docker Compose packages the services.
+FastAPI, SQLAlchemy, Alembic, and PostgreSQL support the ticket API. React/Vite provides role-specific screens, while Docker Compose packages the frontend, backend, and database.
 
-**Components:** React · FastAPI · PostgreSQL · Docker
+**Built with:** React / TypeScript · FastAPI · PostgreSQL · Docker
 
-[Source repository ↗](https://github.com/NoirPrimordial7/ResolveX)
+## Current scope
+
+The implemented scope is ticket operations and role-based access. Email notifications, attachments, SLA timers, and refresh tokens are listed as future improvements in the source repository.
+
+[Source repository ↗](https://github.com/NoirPrimordial7/ResolveX) · [Back to profile](../../README.md#selected-work)

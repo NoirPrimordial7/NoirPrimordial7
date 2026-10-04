@@ -19,6 +19,8 @@ def emblem(x,y,size):
 def symbol(pid,color=INK):
     base=f'fill="none" stroke="{color}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"'
     paths={
+      'market':'M10 80V18M10 80H88M20 64L38 47L53 56L78 26M63 26H78V41',
+      'wildlife':'M9 32V10H31M69 10H91V32M91 68V90H69M31 90H9V68 M30 68Q22 55 37 48Q50 32 63 48Q78 55 70 68Q62 80 50 72Q36 79 30 68',
       'tendermate':'M22 12H64L80 28V88H22Z M64 12V30H80 M35 44H66 M35 57H57 M35 70H48 M61 65L68 73L91 49',
       'resolvex':'M15 17H84V70H57L33 90V70H15Z M32 35L67 56 M67 35L32 56',
       'kumbh':'M50 8L88 23V49Q86 78 50 94Q14 78 12 49V23Z M28 52Q50 24 72 52 M33 68Q50 48 67 68',

@@ -1,11 +1,17 @@
-# CASE / 04 — NearNest
+# NearNest
 
-Connects medicine discovery with pharmacy onboarding, document verification, inventory and separate customer, store and administrator flows.
+**03 / Application foundation**
+
+A local store and service platform with account flows, store registration saved to Firestore, and separate public and admin interfaces.
 
 ## Inside the system
 
-React routes cover discovery, account setup, store registration and operations. Firebase Authentication and Firestore support identity and application data. Store verification and administration are explicit parts of the product, rather than a single landing page.
+React Router organizes account, registration, and administration screens. Firebase Authentication handles identity, and the store form persists records in Firestore.
 
-**Components:** React · Vite · Firebase · Firestore
+**Built with:** React · Vite · Firebase Auth · Firestore
 
-[Source repository ↗](https://github.com/NoirPrimordial7/nearnest)
+## Current scope
+
+The resume-linked repository is the current portfolio reference. Admin routing exists; the current route guard checks authentication, so granular admin authorization is not claimed here.
+
+[Source repository ↗](https://github.com/NoirPrimordial7/nearnest-platform-2) · [Back to profile](../../README.md#selected-work)

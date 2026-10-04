@@ -1,10 +1,87 @@
 {
   "projects": [
     {
+      "id": "market",
+      "name": "AI-Powered Market Navigator",
+      "card": "Market Navigator",
+      "verb": "FORECAST",
+      "category": "TIME SERIES & SENTIMENT",
+      "color": "#722F48",
+      "repo": "AI-Powered-Market-Navigator",
+      "stack": [
+        "Python",
+        "TensorFlow / Keras",
+        "LSTM",
+        "Streamlit"
+      ],
+      "status": "ML prototype",
+      "description": "Explores stock-price trends with an LSTM model, technical indicators, and Reddit/news sentiment in an interactive Streamlit workflow.",
+      "detail": "Historical market data is prepared with MinMax scaling and indicators including RSI, SMA, MACD, and Bollinger Bands. TensorFlow/Keras inference and VADER sentiment bring numerical and text signals into the same workflow.",
+      "note": "A forecasting experiment. Published benchmark results and forecast accuracy are not claimed here; external data and sentiment integrations need configuration."
+    },
+    {
+      "id": "wildlife",
+      "name": "Wildlife Recognition & Intrusion Alert System",
+      "card": "Wildlife Recognition",
+      "verb": "DETECT",
+      "category": "COMPUTER VISION & ALERTS",
+      "color": "#7185B8",
+      "repo": "wildlife_intrusion_detection_system",
+      "stack": [
+        "Python",
+        "TensorFlow / Keras",
+        "OpenCV",
+        "YOLOv8"
+      ],
+      "status": "Desktop prototype",
+      "description": "Combines YOLOv8 detection with species classification, then confirms danger events with confidence thresholds, repeated detections, and alert cooldowns.",
+      "detail": "Video or webcam frames pass through YOLOv8, animal crops are classified with the existing Keras model, and confirmed danger events save evidence and detection metrics. SMS providers and registered recipients are configurable.",
+      "note": "PC-based prototype. YOLO provides broad animal bounding boxes; the classifier identifies species from crops. SMS is disabled by default and requires provider credentials."
+    },
+    {
+      "id": "nearnest",
+      "name": "NearNest",
+      "card": "NearNest",
+      "verb": "CONNECT",
+      "category": "LOCAL STORES & SERVICES",
+      "color": "#D5A450",
+      "repo": "nearnest-platform-2",
+      "stack": [
+        "React",
+        "Vite",
+        "Firebase Auth",
+        "Firestore"
+      ],
+      "status": "Application foundation",
+      "description": "A local store and service platform with account flows, store registration saved to Firestore, and separate public and admin interfaces.",
+      "detail": "React Router organizes account, registration, and administration screens. Firebase Authentication handles identity, and the store form persists records in Firestore.",
+      "note": "The resume-linked repository is the current portfolio reference. Admin routing exists; the current route guard checks authentication, so granular admin authorization is not claimed here."
+    },
+    {
+      "id": "resolvex",
+      "name": "ResolveX",
+      "card": "ResolveX",
+      "verb": "RESOLVE",
+      "category": "CUSTOMER SUPPORT & WORKFLOWS",
+      "color": "#C4523E",
+      "repo": "ResolveX",
+      "stack": [
+        "React / TypeScript",
+        "FastAPI",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "status": "Full-stack helpdesk",
+      "description": "A customer-support ticketing system with customer, support-agent, and admin roles, JWT/RBAC, assignment, comments, filters, and reassignment workflows.",
+      "detail": "FastAPI, SQLAlchemy, Alembic, and PostgreSQL support the ticket API. React/Vite provides role-specific screens, while Docker Compose packages the frontend, backend, and database.",
+      "note": "The implemented scope is ticket operations and role-based access. Email notifications, attachments, SLA timers, and refresh tokens are listed as future improvements in the source repository."
+    },
+    {
       "id": "tendermate",
       "name": "TenderMate AI",
+      "card": "TenderMate AI",
       "verb": "ANALYZE",
-      "category": "AI DOCUMENT WORKSPACE",
+      "category": "DOCUMENT AI & TENDER READINESS",
       "color": "#722F48",
       "repo": "TenderMate-AI",
       "stack": [
@@ -13,57 +90,11 @@
         "Supabase",
         "Gemini"
       ],
-      "description": "Turns tender PDFs into structured analysis, with authenticated workspaces, private storage, quotas and audit logging.",
-      "detail": "The browser talks to a FastAPI service for PDF extraction and Gemini analysis. Supabase provides PostgreSQL and private document storage; authorization, account limits and audit events stay on the server.",
+      "status": "Tender-readiness MVP",
+      "description": "Turns tender PDFs into AI-assisted analysis with private storage, user-scoped history, text extraction, and Gemini OCR fallback for scanned documents.",
+      "detail": "A Next.js frontend connects to FastAPI, Supabase PostgreSQL, private Supabase Storage, and Gemini. JWT authentication, rate limits, daily upload quotas, account lockout, audit logs, and trial-credit tracking support the workflow.",
+      "note": "An MVP with separate Vercel and Render deployment flows. OCR and AI analysis depend on backend provider configuration.",
       "live": "https://tender-mate-ai.vercel.app"
-    },
-    {
-      "id": "resolvex",
-      "name": "ResolveX",
-      "verb": "RESOLVE",
-      "category": "PLACEMENT SUPPORT / ROLE-BASED WORKFLOWS",
-      "color": "#7185B8",
-      "repo": "ResolveX",
-      "stack": [
-        "React",
-        "FastAPI",
-        "PostgreSQL",
-        "Docker"
-      ],
-      "description": "Connects students, faculty and placement administrators through role-based ticket assignment, conversations and resolution workflows.",
-      "detail": "A React interface sits above FastAPI, SQLAlchemy and PostgreSQL. JWT authentication and role checks separate customer, agent and administrator workflows. Alembic manages schema changes; Docker Compose packages the services."
-    },
-    {
-      "id": "kumbh",
-      "name": "Kumbh Kavach",
-      "verb": "PROTECT",
-      "category": "FAMILY SAFETY · DEMO PWA",
-      "color": "#D5A450",
-      "repo": "kumbh-kavach-family-safety",
-      "stack": [
-        "React",
-        "TypeScript",
-        "MapLibre",
-        "Zustand"
-      ],
-      "description": "Explores family safety in crowded places through a working PWA with a regional map, reunion flow and simulated separation/SOS scenarios.",
-      "detail": "The jury demo works without accounts or hardware. Family movement, bands and SOS scenarios are simulated; browser geolocation is optional. This is a demonstrator, not a deployed emergency service or an offline mesh network."
-    },
-    {
-      "id": "nearnest",
-      "name": "NearNest",
-      "verb": "DISCOVER",
-      "category": "PHARMACY DISCOVERY & STORE OPERATIONS",
-      "color": "#C4523E",
-      "repo": "nearnest",
-      "stack": [
-        "React",
-        "Vite",
-        "Firebase",
-        "Firestore"
-      ],
-      "description": "Connects medicine discovery with pharmacy onboarding, document verification, inventory and separate customer, store and administrator flows.",
-      "detail": "React routes cover discovery, account setup, store registration and operations. Firebase Authentication and Firestore support identity and application data. Store verification and administration are explicit parts of the product, rather than a single landing page."
     }
   ]
 }
